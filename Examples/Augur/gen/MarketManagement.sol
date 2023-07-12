@@ -5,12 +5,13 @@ import "./Market.sol";
 
 contract MarketManagement {
 
-	// no Role can modify or influence
+	// Roles: No Role can modify or influence
 	uint private marketCounter; // Auto-generated Field
 
-	// no Role can modify or influence
+	// Roles: No Role can modify or influence
 	Market[] private markets; // Auto-generated Field
 
+	// Roles: All Roles can directly access {MARKET_CREATOR, DESIGNATED_REPORTER, OPEN_REPORTER, SHAREHOLDER, MANAGER}
 	/// @notice modifies marketCounter 
 	/// @notice modifies markets 
 	function createNewMarket() public {
